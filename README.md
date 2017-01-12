@@ -1,9 +1,9 @@
 # SA-MP-PHP-WarZ
 
-! GTA SAN ANDREAS 
-a. myprofile
-b. feedback
-c. update log
+! KOREA GTA SAN ANDREAS 
+a. myprofile <br/>
+b. feedback <br />
+c. update log <br/>
 
 
 <p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/myprofile.png"></p>
