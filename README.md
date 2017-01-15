@@ -10,9 +10,8 @@ CREATE TABLE `feedback` (
   `f_adddate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `f_contents` varchar(200) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=euckr;
-
 ALTER TABLE `feedback`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT; </br>
 c. update log <br/>
 
 
