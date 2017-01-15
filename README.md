@@ -12,6 +12,8 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=euckr;
 ALTER TABLE `feedback`
   MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT; </br>
+  ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`f_id`);<br/>
 c. update log <br/>
 
 
