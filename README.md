@@ -21,9 +21,16 @@
  - feedback db name : feedback.sql
    
     
-## feedback sql
->#### 
-REATE TABLE feedback ( f_id int(11) NOT NULL, f_ip text CHARACTER SET latin1 NOT NULL, f_name varchar(20) CHARACTER SET latin1 NOT NULL, f_adddate timestamp NULL DEFAULT CURRENT_TIMESTAMP, f_contents varchar(200) CHARACTER SET utf8 NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=euckr; ALTER TABLE feedback MODIFY f_id int(11) NOT NULL AUTO_INCREMENT; 
-ALTER TABLE feedback ADD PRIMARY KEY (f_id);
+## capture the images
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/1.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/2.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/3.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/4.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/5.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/6.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/7.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/8.jpg?raw=true"></p>
+<p align="center"><img src="https://github.com/getsolaris/SA-MP-PHP-WarZ/blob/master/9.jpg?raw=true"></p>
+
 
 
