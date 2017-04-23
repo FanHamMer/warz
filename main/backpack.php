@@ -9,6 +9,8 @@ $backpack_contents_array=array("갈증을 조금 해결해준다.","갈증을 �
 "임시피난소에 들어갈 수 있는 ID CARD이다. 이 카드가 없으면 임시피난소에 접근이 불가능 하다.","무슨 차량인진 모르겠지만, 아마 맞는 차가 있을 것 같다.","니콜라스의 임무증이다.","총기에 사용되는 총알이다.",
 "총기에 사용되는 총알이다.","총기에 사용되는 총알이다.","총기에 사용되는 총알이다.","총기에 사용되는 총알이다.","총기에 사용되는 총알이다.","총기에 사용되는 총알이다.","총기에 사용되는 총알이다.",
 "먹으면 포만감을 조금 채워줄 것 같다.","마시면 갈증을 조금 채워줄 것 같다.","먹으면 포만감을 조금 채워줄 것 같다.","30리터 용량인 기름통이다.","알 수 없는 무기가 들어있는 상자이다.");
+
+$item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3","2","5","1","50","50","100","30","150","200","200","180","500");
 ?>
 
 <!DOCTYPE html>
@@ -150,6 +152,7 @@ $backpack_contents_array=array("갈증을 조금 해결해준다.","갈증을 �
         <!-- Optionally, you can add icons to the links -->
         <li><a href="index.php"><i class="fa fa-book"></i> <span>내정보</span></a></li>
         <li class="active"><a href="backpack.php"><i class="fa fa-archive"></i> <span>가방</span></a></li>
+          <li><a href="rank.php"><i class="fa fa-heart"></i> <span>랭킹</span></a></li>
         <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>업데이트 내역</span></a></li>
         <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>서버 현황</span></a></li>
         <li><a href="feedback.php"><i class="fa fa-commenting"></i> <span>피드백</span></a></li>
@@ -164,8 +167,13 @@ $backpack_contents_array=array("갈증을 조금 해결해준다.","갈증을 �
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <h1>가방</h1>
-    </section>
 
+<div class="pad margin no-print">
+      <div class="callout callout-info" style="margin-bottom: 0!important;">
+        <h4><i class="fa fa-info"></i> 안내사항:</h4>
+        보유하지 않은 아이템은 표시 되지 않습니다.
+      </div>
+    </div>
     <!-- Main content -->
     <section class="content">
       <div class="row">

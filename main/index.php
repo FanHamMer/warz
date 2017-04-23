@@ -193,6 +193,7 @@ $weapon_arrays_content[20]="보유 총기 없음";
         <!-- Optionally, you can add icons to the links -->
         <li class="active"> <a href="#"><i class="fa fa-book"></i> <span>내정보</span></a></li>
         <li><a href="backpack.php"><i class="fa fa-archive"></i> <span>가방</span></a></li>
+        <li><a href="rank.php"><i class="fa fa-heart"></i> <span>랭킹</span></a></li>
         <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>업데이트 내역</span></a></li>
         <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>서버 현황</span></a></li>
         <li><a href="feedback.php"><i class="fa fa-commenting"></i> <span>피드백</span></a></li>

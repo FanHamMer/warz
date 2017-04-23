@@ -11,7 +11,7 @@ $p_name=$_SESSION['p_name'];
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>WarZ | 홈</title>
+  <title>WarZ | 업데이트 내역</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -145,6 +145,7 @@ $p_name=$_SESSION['p_name'];
         <!-- Optionally, you can add icons to the links -->
         <li><a href="index.php"><i class="fa fa-book"></i> <span>내정보</span></a></li>
         <li><a href="backpack.php"><i class="fa fa-archive"></i> <span>가방</span></a></li>
+          <li><a href="rank.php"><i class="fa fa-heart"></i> <span>랭킹</span></a></li>
         <li  class="active"><a href="update_log.php"><i class="fa fa-edit"></i> <span>업데이트 내역</span></a></li>
         <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>서버 현황</span></a></li>
         <li><a href="feedback.php"><i class="fa fa-commenting"></i> <span>피드백</span></a></li>
@@ -161,8 +162,94 @@ $p_name=$_SESSION['p_name'];
     <h1>업데이트 내역</h1>
     </section>
 
+    <div class="pad margin no-print">
+          <div class="callout callout-info" style="margin-bottom: 0!important;">
+            <h4><i class="fa  fa-bullhorn"></i> 개발자의 한마디:</h4>
+            서버 업데이트 내역이 올라오는 곳 입니다. &nbsp;&nbsp;&nbsp;&nbsp;- by. WarZ Developer Team
+          </div>
+        </div>
     <!-- Main content -->
     <section class="content">
+
+
+
+      <ul class="timeline">
+    <li class="time-label">
+        <span class="bg-red">
+            04.09.2017
+        </span>
+    </li>
+    <!-- /.timeline-label -->
+
+    <!-- timeline item -->
+    <li>
+        <!-- timeline icon -->
+        <i class="fa fa-envelope bg-blue"></i>
+        <div class="timeline-item">
+            <span class="time"><i class="fa fa-clock-o"></i> </span>
+
+            <h3 class="timeline-header"><a href="#">helios</a></h3>
+
+            <div class="timeline-body">
+               서버현황 구현을 마쳤습니다. [서버인원수 / 버전 / 닉네임 / 핑] <br />
+
+            </div>
+        </div>
+    </li>
+
+
+          <ul class="timeline">
+        <li class="time-label">
+            <span class="bg-red">
+                04.09.2017
+            </span>
+        </li>
+        <!-- /.timeline-label -->
+
+        <!-- timeline item -->
+        <li>
+            <!-- timeline icon -->
+            <i class="fa fa-envelope bg-blue"></i>
+            <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> </span>
+
+                <h3 class="timeline-header"><a href="#">helios</a></h3>
+
+                <div class="timeline-body">
+                   각 메뉴에 대한 안내사항을 추가 했습니다. <br />
+
+                </div>
+            </div>
+        </li>
+
+
+
+         <ul class="timeline">
+        <li class="time-label">
+            <span class="bg-red">
+                04.09.2017
+            </span>
+        </li>
+        <!-- /.timeline-label -->
+
+        <!-- timeline item -->
+        <li>
+            <!-- timeline icon -->
+            <i class="fa fa-envelope bg-blue"></i>
+            <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> </span>
+
+                <h3 class="timeline-header"><a href="#">helios</a></h3>
+
+                <div class="timeline-body">
+                    랭킹 시스템을 구현 했습니다. <br />
+
+                </div>
+            </div>
+        </li>
+
+
+
       <ul class="timeline">
         <li class="time-label">
             <span class="bg-red">
@@ -188,30 +275,6 @@ $p_name=$_SESSION['p_name'];
         </li>
 
 
-
-      <ul class="timeline">
-        <li class="time-label">
-            <span class="bg-red">
-                01.16.2017
-            </span>
-        </li>
-        <!-- /.timeline-label -->
-
-        <!-- timeline item -->
-        <li>
-            <!-- timeline icon -->
-            <i class="fa fa-envelope bg-blue"></i>
-            <div class="timeline-item">
-                <span class="time"><i class="fa fa-clock-o"></i> </span>
-
-                <h3 class="timeline-header"><a href="#">helios</a></h3>
-
-                <div class="timeline-body">
-                    인포웹 코드를 간략화 시켜 메인(index) 페이지의 속도를 0.01ms ~ 0.1ms 상승 시켰습니다. <br />
-
-                </div>
-            </div>
-        </li>
 
       <ul class="timeline">
         <li class="time-label">

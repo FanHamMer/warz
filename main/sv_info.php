@@ -11,7 +11,7 @@ $p_name=$_SESSION['p_name'];
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>WarZ | 피드백</title>
+  <title>WarZ | 서버 현황</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -31,7 +31,6 @@ $p_name=$_SESSION['p_name'];
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-
 </head>
 
 <body class="hold-transition skin-red-light sidebar-mini">
@@ -148,8 +147,8 @@ $p_name=$_SESSION['p_name'];
         <li><a href="backpack.php"><i class="fa fa-archive"></i> <span>가방</span></a></li>
           <li><a href="rank.php"><i class="fa fa-heart"></i> <span>랭킹</span></a></li>
         <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>업데이트 내역</span></a></li>
-        <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>서버 현황</span></a></li>
-        <li  class="active"><a href="feedback.php"><i class="fa fa-commenting"></i> <span>피드백</span></a></li>
+        <li  class="active"><a href="sv_info.php"><i class="fa fa-th"></i> <span>서버 현황</span></a></li>
+        <li><a href="feedback.php"><i class="fa fa-commenting"></i> <span>피드백</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -161,63 +160,139 @@ $p_name=$_SESSION['p_name'];
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <h1>
-    피드백
-      </h1>
+    서버 현황      </h1>
     </section>
 
-<div class="pad margin no-print">
-      <div class="callout callout-info" style="margin-bottom: 0!important;">
-        <h4><i class="fa  fa-bullhorn"></i> 개발자의 한마디:</h4>
-        많은 피드백 부탁 드립니다. ^_^ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Titor 와 Helios 의 Say.
-      </div>
-    </div>
+        <div class="pad margin no-print">
+          <div class="callout callout-info" style="margin-bottom: 0!important;">
+            <h4><i class="fa fa-info"></i> 안내사항:</h4>
+            서버 인원수 및 서버 정보를 확인 할 수 있습니다.
+          </div>
+        </div>
+
+
     <!-- Main content -->
     <section class="content">
-      <div class="box box-danger">
-        <form action="../dist/include/feedback_add.php" method="POST">
-              <div class="box-header with-border">
-                <h3 class="box-title">글 작성</h3>
-              </div>
-              <div class="box-body">
-                <div class="row">
+      <div class="row">
+        <div class="col-md-3">
 
-                  <div class="col-xs-5">
-                    <div class="form-group">
-                       <input type="hidden" name="f_name" value="<?php echo $p_name;?>" class="hide" style="border: 0px;" readonly>
-                    <textarea class="form-control" rows="5" name="f_contents" placeholder="피드백을 적어주세요 >ㅁ<" required></textarea>
-                  </div>
-                  <button type="submit" name="submit" class="btn btn-danger">등록</button> </form>
-                   <br><br><br>
-                  </div>
-                </div>
+          <?php
+          require "../dist/include/samp_query.php";
 
-                <div class="box-body table-responsive no-padding">
+          $serverIP = "46.105.234.125";
+          $serverPort = 7777;
 
-                              <table class="table table-hover">
-                                <tr>
-                                <th><center>닉네임</center></th>
-                                  <th><center>내용</th>
-                                  <th><center>날짜</center></th>
-                                </tr><?php
-                                $sql = "select * from feedback order by f_id desc ";
-                                $result = mysql_query($sql);
-                                 for($i=0; $row = @mysql_fetch_array($result); $i++){
-                                ?>
-                                <tr>
-                                  <td align="center"><?php echo $row['f_name']?></td>
-                                  <td align="center"><?php echo $row['f_contents']?></td>
-                                  <td align="center"><?php echo $row['f_adddate']?></td>
-                                </tr><?php } ?>
-                              </table>
-                            </div>
-                            <!-- /.box-body -->
-                          </div>
+          try
+          {
+              $rQuery = new QueryServer( $serverIP, $serverPort );
 
+              $aInformation = $rQuery->GetInfo( );
+              $aServerRules = $rQuery->GetRules( );
+              $aBasicPlayer = $rQuery->GetPlayers( );
+              $aTotalPlayers = $rQuery->GetDetailedPlayers( );
+
+              $rQuery->Close( );
+          }
+          catch (QueryServerException $pError)
+          {
+              echo '이 텍스트가 표시된다면 새로고침을 해주시기 바랍니다.<br />여러번 시도후 이 텍스트가 표시된다면 서버OFF 입니다.';
+          }
+
+          if(isset($aInformation) && is_array($aInformation)){
+          ?>
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">서버 정보</h3>
+
+
+
+
+              <div class="box-tools">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
               </div>
             </div>
+            <div class="box-body no-padding">
+              <ul class="nav nav-pills nav-stacked">
+
+                <li><a href="#"><i class="fa fa-filter"></i> 인원수 <span class="label label-warning pull-right"><?php echo $aInformation['Players']; ?></span></a>
+                </li>
+                <li><a href="#"><i class="fa fa-exclamation-circle"></i> 버전 <span class="label label-warning pull-right"><?php echo $aServerRules['version']; ?></span></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /. box -->
+
+        </div>
+        <!-- /.col -->
+        <div class="col-md-9">
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">서버 인원</h3>
+
+              <div class="box-tools pull-right">
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+
+              </div>
+                <div class="box-body table-responsive no-padding">
+                <table class="table table-hover table-striped">
+                  <tbody>
+                    <tr>
+                                      <th>#</th>
+                                      <th>닉네임</th>
+                                      <th>핑</th>
+
+                                    </tr>
+                    <?php
+                      if(!is_array($aTotalPlayers) || count($aTotalPlayers) == 0){
+
+                      } else {
+
+  	  foreach($aTotalPlayers AS $id => $value){
+  	  ?>
+
+                  <tr>
+                    <td class="mailbox-star"><?php $ii++; echo $ii; ?></a></td>
+                    <td class="mailbox-name"><?php echo htmlentities($value['Nickname']); ?></td>
+                <!--    <td class="mailbox-attachment"></td> -->
+                    <td class="mailbox-date"><?php echo $value['Ping']; ?></td>
+                  </tr>
+
+                  </tbody>
+                  <?php
+	  }
+}
+	  echo '</table>';
+
+}
+?>
+                <!-- /.table -->
+              </div>
+              <!-- /.mail-box-messages -->
+            </div>
+            <!-- /.box-body -->
+
+
+        <!-- /.col -->
       </div>
+      <!-- /.row -->
     </section>
 
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Your Page Content Here -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
 
   <!-- Main Footer -->
   <footer class="main-footer">
