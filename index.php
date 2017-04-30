@@ -1,3 +1,23 @@
+<?php
+include('dist/include/connection.php');
+include('dist/include/dbconfig.php');
+
+session_start();
+
+
+if($_SESSION[p_name]){
+    ?>
+    <script>
+        alert("로그인 하신 상태입니다. 메인으로 돌아갑니다.");
+        location.href = "main/";
+    </script>
+    <?php
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,17 +44,18 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition login-page">
+<body style="overflow:hidden" class="hold-transition login-page">
 <div class="login-box">
-  <div class="login-logo">
-    <a href="#"><font color="white"><b>warz</a></font>
-  </div>
+  <!--<div class="login-logo">
+    <a href="#"><font color="white"><b>WarZ</a></font>
+  </div> -->
   <!-- /.login-logo -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <div class="login-box-body">
 
     <form action="dist/include/login.php" method="post">
       <div class="form-group has-feedback">
-        <input type="text" name="p_name" class="form-control" placeholder="닉네임" required autocomplete="off">
+        <input type="text" name="p_name" class="form-control" placeholder="닉네임" required autocomplete="off" style="ime-mode:inactive">
         <span class="glyphicon glyphicon-check form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -43,20 +64,17 @@
       </div>
       <div class="row">
         <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> 기억 해주세요
-            </label><br><p align="center">developer by abov</p>
 
-          </div>
+          <a href="register.php?status=myself"><button type="button" class="btn btn-default btn-block btn-flat">회원가입</button></a>
+
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
+          <button type="submit" name="submit" class="btn btn-danger btn-block btn-flat">로그인</button></form>
         </div>
         <!-- /.col -->
       </div>
-    </form>
+
 
   </div>
   <!-- /.login-box-body -->
@@ -82,7 +100,7 @@
 <script type="text/javascript" src="dist/js/jquery.backstretch.min.js"></script>
        <script>
            // jquery baackstretch (03.04.16)
-           $.backstretch("dist/img/warzbg.jpg", {
+           $.backstretch("dist/img/warzbg.png", {
                speed: 4000
            });
        </script>
