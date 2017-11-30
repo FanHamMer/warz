@@ -4,7 +4,7 @@ include("../dist/include/check.php");
 include("../dist/include/dbconfig.php");
 $p_name=$_SESSION['p_name'];
 
-// 총기 배열
+// список оружия
 /*$weapon_arrays[0]="Remington 870";
 $weapon_arrays[1]="tula RMB-93"
 $weapon_arrays[2]="Winchester 1300";
@@ -25,13 +25,20 @@ $weapon_arrays[16]="mossberg 930 SPX";
 $weapon_arrays[17]="M9";
 $weapon_arrays[18]="Baseball Bat";
 $weapon_arrays[19]="Crossbow";
-$weapon_arrays[20]="보유 총기 없음";*/
+$weapon_arrays[20]="Без оружия";*/
 
-$weapon_arrays=array("Remington 870","tula RMB-93","Winchester 1300","H&K UMP45","MP7A1","Steyr TMP","M1911A1","Lee Enfield","Mosin-Nagant","makarovPB","M16A1","Beretta 92","Glock 17","FN FAL","Kar98K","Colt Python","Mossberg 930 SPX","M9","Baseball bat","Crossbow","보유 무기 없음");
+$weapon_arrays=array("Remington 870","tula RMB-93",
+                     "Winchester 1300","H&K UMP45",
+                     "MP7A1","Steyr TMP","M1911A1",
+                     "Lee Enfield","Mosin-Nagant",
+                     "makarovPB","M16A1","Beretta 92",
+                     "Glock 17","FN FAL","Kar98K",
+                     "Colt Python","Mossberg 930 SPX",
+                     "M9","Baseball bat","Crossbow","Без оружия");
 
 // 총기 이미지 이름 설명
-$weapon_arrays_content[0]="<img src='../dist/img/gun/remington870.jpg'><br/><b>Remington 870</b><br/>미국 Remington사에서 제작한 산탄총.<br/>강도가 강하고 사용이 편하나, 장탄 수가 적은 단점이있다.";
-$weapon_arrays_content[1]="<img src='../dist/img/gun/RMB-93.jpg'><br/><b>tula RMB-93</b><br/>러시아 전투용 샷건.<br/>가볍고 특이한 점은 다른 산탄총과 달리 전진-후퇴방식으로 장전한다.";
+$weapon_arrays_content[0]="<img src='../dist/img/gun/remington870.jpg'><br/><b>Remington 870</b><br/>Ружье, сделанное американским Ремингтоном.<br/>Он имеет прочную силу, прост в использовании, но имеет недостаток в том, что количество дробовиков невелико.";
+$weapon_arrays_content[1]="<img src='../dist/img/gun/RMB-93.jpg'><br/><b>tula RMB-93</b><br/>Русский боевой дробовик.<br/>В отличие от других дробовиков, легкие и необычные точки загружаются вперед-назад.";
 $weapon_arrays_content[2]="<img src='../dist/img/gun/winchester-1300.jpg'><br/><b>Winchester 1300</b><br/>Winchester 사에서 제작한 산탄총.\n 장탄수도 작은편이 아니고 내구성도 좋아 많은 사람이 사용했었다.";
 $weapon_arrays_content[3]="<img src='../dist/img/gun/ump45.jpg'><br/><b>H&K UMP45</b><br/>독일에서 제작된 기관단총\nMP5가 많은 기관과 군에서 사용된 이래 9mm 탄의 저지력 문제가 대두되자, 이를 해결하기 위해 같은 권총탄 내에서도 9mm보다는 쪼금 더 위력이 강한 45구경 ACP탄을 사용한 SMG를 만들기로 한 것이다.\n그 결과 나온 것이 UMP45다.";
 $weapon_arrays_content[4]="<img src='../dist/img/gun/mp7a1.jpg'><br/>MP7A1<br/>FN이 개발한 P90의 대항마.\n폴란드 기관단총 PM-63을 모티브로 제작되었으며,  기동성과 가벼운 무게가 특징이다.";
@@ -48,9 +55,9 @@ $weapon_arrays_content[14]="<img src='../dist/img/gun/kar98k.png'><br/><b>Kar98K
 $weapon_arrays_content[15]="<img src='../dist/img/gun/colt_python.jpg'><br/><b>Colt Python</b><br/>1955년 생산된 6연발 .357구경 리볼버.\n명품 브랜드 라인업 중 최초이며 뱀 이름을 붙이는데 재미붙인 콜트는 이후 생산 되는 리볼버에 뱀 이름을 붙이기 시작한다.";
 $weapon_arrays_content[16]="<img src='../dist/img/gun/Mossberg930_7.jpg'><br/><b>Mossberg 930 SPX</b><br/>O.F Mossberg & Sons에서 디자인 된 12구경 반자동 산탄총.\n사냥꾼과 스키트 사격 선수에 의해 사용되는 가장 인기있는 자동 산탄총 중 하나이다.";
 $weapon_arrays_content[17]="<img src='../dist/img/gun/m9.jpg'><br/><b>M9</b><br/>미군이 채용하여 사용하고있는 대검.\n찌르고 휘둘고 유용하게 사용이 가능하다.";
-$weapon_arrays_content[18]="<img src='../dist/img/gun/bat.jpg'><br/><b>Baseball Bat</b><br/>나무로 된 방망이";
+$weapon_arrays_content[18]="<img src='../dist/img/gun/bat.jpg'><br/><b>Baseball Bat</b><br/>Деревянная бита";
 $weapon_arrays_content[18]="<img src='../dist/img/gun/crossbow.jpg'><br/><b>Crossbow</b><br/>좀비를 조용하고 안전하게 죽이는 데 최적화된 무기이다.";
-$weapon_arrays_content[20]="보유 총기 없음";
+$weapon_arrays_content[20]="Без оружия";
 
 ?>
     <!DOCTYPE html>
@@ -90,7 +97,7 @@ $weapon_arrays_content[20]="보유 총기 없음";
                 <!-- Header Navbar -->
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
-                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <span class="sr-only">Toggle navigation</span> </a>
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <span class="sr-only">Переключить навигацию</span> </a>
                     <!-- Navbar Right Menu -->
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
@@ -99,9 +106,9 @@ $weapon_arrays_content[20]="보유 총기 없음";
                                 <!-- Menu toggle button -->
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell-o"></i> <span class="label label-warning">NEW</span> </a>
                                 <ul class="dropdown-menu">
-                                    <li class="header">워즈 웹 알리미</li>
+                                    <li class="header">Words Web Alerts</li>
                                     <li>
-                                        <!-- Inner Menu: contains the notifications -->
+                                        <!-- Внутреннее меню: содержит уведомления -->
                                       <?php
                                 $sql = "select * from webalarm order by date desc ";
                                 $result = mysql_query($sql);
@@ -134,8 +141,8 @@ $weapon_arrays_content[20]="보유 총기 없음";
                                     </li>
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
-                                        <div class="pull-left"> <a href="#" class="btn btn-default btn-flat">내정보</a> </div>
-                                        <div class="pull-right"> <a href="../dist/include/logout.php" class="btn btn-default btn-flat">로그아웃</a> </div>
+                                        <div class="pull-left"> <a href="#" class="btn btn-default btn-flat">Моя информация</a> </div>
+                                        <div class="pull-right"> <a href="../dist/include/logout.php" class="btn btn-default btn-flat">Выйти</a> </div>
                                     </li>
                                 </ul>
                             </li>
@@ -160,14 +167,14 @@ $weapon_arrays_content[20]="보유 총기 없음";
                     </div>
                     <!-- Sidebar Menu -->
                     <ul class="sidebar-menu">
-                        <li class="header">메뉴</li>
+                        <li class="header">Меню</li>
                         <!-- Optionally, you can add icons to the links -->
-                        <li class="active"> <a href="#"><i class="fa fa-book"></i> <span>내정보</span></a></li>
-                        <li><a href="backpack.php"><i class="fa fa-archive"></i> <span>가방</span></a></li>
-                        <li><a href="rank.php"><i class="fa fa-heart"></i> <span>랭킹</span></a></li>
-                        <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>업데이트 내역</span></a></li>
-                        <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>서버 현황</span></a></li>
-                        <li><a href="feedback.php"><i class="fa fa-commenting"></i> <span>피드백</span></a></li>
+                        <li class="active"> <a href="#"><i class="fa fa-book"></i> <span>Моя информация</span></a></li>
+                        <li><a href="backpack.php"><i class="fa fa-archive"></i> <span>Инвентарь</span></a></li>
+                        <li><a href="rank.php"><i class="fa fa-heart"></i> <span>Ранжирование</span></a></li>
+                        <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>История обновлений</span></a></li>
+                        <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>Состояние сервера</span></a></li>
+                        <li><a href="feedback.php"><i class="fa fa-commenting"></i> <span>Обратная связь</span></a></li>
                     </ul>
                     <!-- /.sidebar-menu -->
                 </section>
@@ -178,7 +185,7 @@ $weapon_arrays_content[20]="보유 총기 없음";
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-    <?php if ($p_tutorial == 0) { echo "내정보 (튜토리얼 미완료)<br/>"; echo "<font size='2'>"; echo "아래 정보가 정상적으로 표시 되지 않습니다. 튜토리얼을 완료 해주세요."; echo "</font>";} else { echo "내정보";} ?>
+    <?php if ($p_tutorial == 0) { echo "Моя информация (Информация не заполнена)<br/>"; echo "<font size='2'>"; echo "Информация ниже не отображается нормально. Пожалуйста, заполните учебник."; echo "</font>";} else { echo "Моя информация";} ?>
       </h1> </section>
                 <!-- Main content -->
                 <section class="content">
@@ -189,45 +196,45 @@ $weapon_arrays_content[20]="보유 총기 없음";
                                 <div class="box-body box-profile"> <img class="profile-user-img img-responsive img-circle" src="../dist/img/skin/<?php
                echo $p_skin;?>.png" alt="<?php echo $p_skin;?>">
                                     <h3 class="profile-username text-center"><?php echo $p_name;?></h3>
-                                    <p class="text-muted text-center">임시 피난소 피난민</p>
+                                    <p class="text-muted text-center">Временный беженец</p>
                                     <ul class="list-group list-group-unbordered">
-                                        <li class="list-group-item"> <b>체력</b>
+                                        <li class="list-group-item"> <b>Тело</b>
                                             <a class="pull-right">
                                                 <?php echo $p_health;?>
                                             </a>
                                         </li>
-                                        <li class="list-group-item"> <b>성별</b>
+                                        <li class="list-group-item"> <b>Пол</b>
                                             <a class="pull-right">
                                                 <?php
-                  if ($p_gender==1) { echo "남성";} else if ($p_gender==2){ echo "여성";} else { echo"튜토리얼 미완료";}?>
+                  if ($p_gender==1) { echo "мужчина";} else if ($p_gender==2){ echo "женщина";} else { echo"Неполный учебник";}?>
                                             </a>
                                         </li>
-                                        <li class="list-group-item"> <b>스킨번호</b>
+                                        <li class="list-group-item"> <b>Номер кожи</b>
                                             <a class="pull-right">
                                                 <?php echo $p_skin;?>
                                             </a>
                                         </li>
                                         <li class="list-group-item">
-                                            <!--보유 총기 --><b><?php for($count = -1; $count <=19; $count++){
+                                            <!--Held пистолет --><b><?php for($count = -1; $count <=19; $count++){
                     if ($p_weapontype == $count) { echo $weapon_arrays[$count]; }
-                  }?>&nbsp;<font size="0.7">(총알/탄창)</font></b>
+                  }?>&nbsp;<font size="0.7">(Пуля / журнал)</font></b>
                                             <a class="pull-right">
                                                 <?php echo $p_ammo;?>/
                                                     <?php echo $p_reload;?>
                                             </a>
                                         </li>
-                                        <li class="list-group-item"> <b>좀비 킬 수</b>
+                                        <li class="list-group-item"> <b>Убийств зомби</b>
                                             <a class="pull-right">
                                                 <?php echo $p_zombiekills;?>
                                             </a>
                                         </li>
-                                        <li class="list-group-item"> <b>플레이 시간</b>
+                                        <li class="list-group-item"> <b>Время воспроизведения</b>
                                             <a class="pull-right">
-                                                <?php echo $p_hours;?>시간
-                                                    <?php echo $p_minute;?>분
-                                                        <?php echo $p_second;?>초</a>
+                                                <?php echo $p_hours;?>часы
+                                                    <?php echo $p_minute;?>минуты
+                                                        <?php echo $p_second;?>секунды</a>
                                         </li>
-                                        <li class="list-group-item"> <b>자원</b>
+                                        <li class="list-group-item"> <b>Ресурсы</b>
                                             <a class="pull-right">
                                                 <?php echo $p_bullet;?>$</a>
                                         </li>
@@ -239,25 +246,25 @@ $weapon_arrays_content[20]="보유 총기 없음";
                             <!-- About Me Box -->
                             <div class="box box-danger">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">캐릭터 상태(수치)</h3> </div>
+                                    <h3 class="box-title">Состояние символа (числовое значение)</h3> </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
                                     <ul class="list-group list-group-unbordered">
-                                        <li class="list-group-item"> <b>출혈</b>
+                                        <li class="list-group-item"> <b>Кровотечение</b>
                                             <a class="pull-right">
                                                 <?php echo ($p_bleeding==1)?"출혈":"미출혈"; ?>
                                             </a>
                                         </li>
-                                        <li class="list-group-item"> <b>배고픔</b>
+                                        <li class="list-group-item"> <b>Голод</b>
                                             <a class="pull-right">
-                                                <?php if ($p_hunger<30) { echo "굶주림"; }
-                 else if ($p_hunger<60) { echo "허기짐"; } else { echo "정상"; }?>
+                                                <?php if ($p_hunger<30) { echo "Голоден"; }
+                 else if ($p_hunger<60) { echo "Проголодался"; } else { echo "Полностью сыт"; }?>
                                             </a>
                                         </li>
-                                        <li class="list-group-item"> <b>목마름</b>
+                                        <li class="list-group-item"> <b>Жажда</b>
                                             <a class="pull-right">
-                                                <?php if ($p_thirst<30) { echo "탈수"; }
-                 else if ($p_thirst<60) { echo "갈증"; } else { echo "정상"; }?>
+                                                <?php if ($p_thirst<30) { echo "Дегидратация"; }
+                 else if ($p_thirst<60) { echo "Выпить бы"; } else { echo "Не мучает"; }?>
                                             </a>
                                         </li>
                                     </ul>
@@ -270,12 +277,12 @@ $weapon_arrays_content[20]="보유 총기 없음";
                         <div class="col-md-6">
                             <div class="box box-danger">
                                 <div class="box-header with-border"> <i class="fa fa-bullhorn"></i>
-                                    <h3 class="box-title">보유 총기</h3> </div>
+                                    <h3 class="box-title">Held пистолет</h3> </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
                                     <center>
                                         <p>
-                                            <!--보유 총기 -->
+                                            <!--Held пистолет -->
                                             <?php for($count = -1; $count <=19; $count++){
                     if ($p_weapontype == $count) { echo $weapon_arrays_content[$count]; }
                   }?>
@@ -290,7 +297,7 @@ $weapon_arrays_content[20]="보유 총기 없음";
                         <div class="col-md-6">
                             <div class="box box-danger">
                                 <div class="box-header with-border"> <i class="fa fa-warning"></i>
-                                    <h3 class="box-title">스킬&nbsp;<font size="2">(전선조작 및 조합기능)</font></h3> </div>
+                                    <h3 class="box-title">умение&nbsp;<font size="2">(Работа провода и комбинация)</font></h3> </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
                                     <center>
