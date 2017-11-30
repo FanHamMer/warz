@@ -59,34 +59,34 @@ if($_SESSION[p_name]){
     <form action="register.php?status=gun" method="post">
       <div class="form-group has-feedback">
 
-        <input type="text" name="p_name" class="form-control" placeholder="닉네임" required autocomplete="off"  style="ime-mode:inactive" onkeyup="this.value=this.value.replace(/[^a-zA-Z_]/g,'');">
+        <input type="text" name="p_name" class="form-control" placeholder="Логин" required autocomplete="off"  style="ime-mode:inactive" onkeyup="this.value=this.value.replace(/[^a-zA-Z_]/g,'');">
         <span class="glyphicon glyphicon-check form-control-feedback"></span>
         <p>예시) Gildong_Hong</p>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="p_password1" class="form-control" placeholder="비밀번호" required autocomplete="off">
+        <input type="password" name="p_password1" class="form-control" placeholder="Ваш пароль" required autocomplete="off">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="p_password2" class="form-control" placeholder="비밀번호 다시 입력" required autocomplete="off">
+        <input type="password" name="p_password2" class="form-control" placeholder="Повторно введите пароль" required autocomplete="off">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
 
-        <button type="submit" name="submit" class="btn btn-default btn-block btn-flat">다음</button>
+        <button type="submit" name="submit" class="btn btn-default btn-block btn-flat">Следующий</button>
 
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-            <a href="index.php"><button type="button" class="btn btn-danger btn-block btn-flat">로그인</button></a>
+            <a href="index.php"><button type="button" class="btn btn-danger btn-block btn-flat">Войти</button></a>
         </div>
         <!-- /.col -->
       </div></div>  </div></div>
 <?php } else if ($_GET['status'] == "character") { ?>
 <?php if (!$_POST['p_name']){ header("location:register.php?status=myself");  }  ?>
 
-<p>캐릭터패널</p>
+<p>Панель символов</p>
 
 
 <?php } else if ($_GET['status'] == "gun"){?>
@@ -98,7 +98,7 @@ $_POST['p_password'] = $_POST['p_password1'];
 
   } else { ?>
     <script>
-    alert("비밀번호가 같지 않습니다.");
+    alert("Пароли не совпадают.");
      window.location.href = 'register.php?status=myself';
 
      </script>
@@ -126,7 +126,7 @@ alert("한번 선택한 총기는 변경이 어렵습니다. 신중히 골라주
 
                              <div class="box box-danger">
                                  <div class="box-header with-border"> <i class="fa fa-bullhorn"></i>
-                                     <h3 class="box-title"><?php echo $_POST['p_name']?>님 총기를 선택 해주세요.</h3> </div>
+                                     <h3 class="box-title"><?php echo $_POST['p_name']?>Выберите пистолет.</h3> </div>
                                  <!-- /.box-header -->
 
                                  <div class="box-body">
@@ -143,19 +143,19 @@ alert("한번 선택한 총기는 변경이 어렵습니다. 신중히 골라주
                                        <input type="radio" name="p_weapontype" value="13" class="flat-red" required>
                                        &nbsp;kar98k
                                      </label>
-                                     <p style="font-size:2px;"><font color="red">한번 선택한 총기는 변경이 어렵습니다. 신중히 골라주시기 바랍니다.<br>총알은 지급 되지 않습니다. 참고 해주시기 바랍니다!</p>
+                                     <p style="font-size:2px;"><font color="red">Когда выбранные пушки трудно изменить. Пожалуйста, выберите внимательно.<br>Пули не оплачиваются. Обратите внимание!</p>
              </div>
 
              <div class="row">
 
                <div class="col-xs-8">
 
-               <button type="submit" name="submit" class="btn btn-default btn-block btn-flat">다음</button>
+               <button type="submit" name="submit" class="btn btn-default btn-block btn-flat">Следующий</button>
              </form>
                </div>
                <!-- /.col -->
                <div class="col-xs-4">
-                  <button type="button" class="btn btn-danger btn-block btn-flat" onclick="alert('인포웹 및 회원가입, 각종 오류\n개발자 네이트온 : laravel@nate.com')">문의</button>
+                  <button type="button" class="btn btn-danger btn-block btn-flat" onclick="alert('InfoWeb, членство, различные ошибки \nDeveloper Nate On : laravel@nate.com')">문의</button>
                </div>
 </div></div>
 
@@ -163,7 +163,7 @@ alert("한번 선택한 총기는 변경이 어렵습니다. 신중히 골라주
 <?php if (!$_POST['p_name']){ header("location:register.php?status=myself");  }  ?>
 
   <script>
-  alert("한번 선택한 음식은 변경이 어렵습니다. 신중히 골라주시기 바랍니다.\n선택하신것에 한하여 2개가 지급됩니다.");
+  alert("Как только еда, которую вы выбираете, трудно изменить. Пожалуйста, выберите тщательно. \nВам будет выплачиваться два за то, что вы выбрали.");
   </script>
   <form action="dist/include/register.php" method="post">
     <input type="hidden" name="p_name" value="<?php echo $_POST['p_name'] ?>">
@@ -178,38 +178,38 @@ alert("한번 선택한 총기는 변경이 어렵습니다. 신중히 골라주
                                      <div class="form-group">
                                        <label>
                                          <input type="radio" name="p_food" value="item_0" class="flat-red" required>
-                                         &nbsp;사과주스
+                                         &nbsp;Сок яблочный
                                        </label><br>
                                        <label>
                                          <input type="radio" name="p_food" value="item_1" class="flat-red" required>
-                                         &nbsp;오렌지주스
+                                         &nbsp;Апельсин
                                        </label><br>
                                        <label>
                                          <input type="radio" name="p_food" value="item_15" class="flat-red" required>
-                                         &nbsp;통조림
+                                         &nbsp;Консервы
                                        </label><br>
                                        <label>
                                          <input type="radio" name="p_food" value="item_16" class="flat-red" required>
-                                         &nbsp;빵
+                                         &nbsp;Хлеб
                                        </label><br>
                                        <label>
                                          <input type="radio" name="p_food" value="item_17" class="flat-red" required>
-                                         &nbsp;물
+                                         &nbsp;Вода
                                        </label>
 
-                                       <p style="font-size:2px;"><font color="red">한번 선택한 음식은 변경이 어렵습니다. 신중히 골라주시기 바랍니다.<br>선택하신것에 한하여 2개가 지급됩니다.</p>
+                                       <p style="font-size:2px;"><font color="red">Как только еда, которую вы выбираете, трудно изменить. Пожалуйста, выберите внимательно.<br>선택하신것에 한하여 2개가 지급됩니다.</p>
                </div>
 
                <div class="row">
 
                  <div class="col-xs-8">
 
-                 <button type="submit" name="submit" class="btn btn-default btn-block btn-flat">다음</button>
+                 <button type="submit" name="submit" class="btn btn-default btn-block btn-flat">Следующий</button>
                </form>
                  </div>
                  <!-- /.col -->
                  <div class="col-xs-4">
-                     <button type="button" class="btn btn-danger btn-block btn-flat">뒤로</button>
+                     <button type="button" class="btn btn-danger btn-block btn-flat">Назад</button>
 
                  </div>
   </div></div>
