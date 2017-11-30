@@ -58,7 +58,7 @@ $item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Переключить навигацию</span>
       </a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
@@ -73,19 +73,19 @@ $item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3
               <span class="label label-warning">1</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">1개의 알림이 있습니다.</li>
+              <li class="header">У вас есть 1 уведомление.</li>
               <li>
                 <!-- Inner Menu: contains the notifications -->
                 <ul class="menu">
                   <li><!-- start notification -->
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i> WarZ 인포웹이 개발 되었습니다.
+                      <i class="fa fa-users text-aqua"></i> WarZ InfoWeb был разработан.
                     </a>
                   </li>
                   <!-- end notification -->
                 </ul>
               </li>
-              <li class="footer"><a href="#">모두 보기</a></li>
+              <li class="footer"><a href="#">Просмотреть все</a></li>
             </ul>
           </li>
 
@@ -112,10 +112,10 @@ $item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">내정보</a>
+                  <a href="#" class="btn btn-default btn-flat">Моя информация</a>
                 </div>
                 <div class="pull-right">
-                  <a href="../dist/include/logout.php" class="btn btn-default btn-flat">로그아웃</a>
+                  <a href="../dist/include/logout.php" class="btn btn-default btn-flat">Выйти</a>
                 </div>
               </li>
             </ul>
@@ -142,20 +142,20 @@ $item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3
         <div class="pull-left info">
           <p><?php echo $p_name;?></p>
           <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> 온라인</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> Интернет</a>
         </div>
       </div>
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
-        <li class="header">메뉴</li>
+        <li class="header">Меню</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="index.php"><i class="fa fa-book"></i> <span>내정보</span></a></li>
-        <li class="active"><a href="backpack.php"><i class="fa fa-archive"></i> <span>가방</span></a></li>
-          <li><a href="rank.php"><i class="fa fa-heart"></i> <span>랭킹</span></a></li>
-        <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>업데이트 내역</span></a></li>
-        <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>서버 현황</span></a></li>
-        <li><a href="feedback.php"><i class="fa fa-commenting"></i> <span>피드백</span></a></li>
+        <li><a href="index.php"><i class="fa fa-book"></i> <span>Моя информация</span></a></li>
+        <li class="active"><a href="backpack.php"><i class="fa fa-archive"></i> <span>Инвентарь</span></a></li>
+        <li><a href="rank.php"><i class="fa fa-heart"></i> <span>Ранжирование</span></a></li>
+        <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>История обновлений</span></a></li>
+        <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>Состояние сервера</span></a></li>
+        <li><a href="feedback.php"><i class="fa fa-commenting"></i> <span>Обратная связь</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -166,12 +166,12 @@ $item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-    <h1>가방</h1>
+    <h1>Инвентарь</h1>
 
 <div class="pad margin no-print">
       <div class="callout callout-info" style="margin-bottom: 0!important;">
-        <h4><i class="fa fa-info"></i> 안내사항:</h4>
-        보유하지 않은 아이템은 표시 되지 않습니다.
+        <h4><i class="fa fa-info"></i> Инструкции:</h4>
+        Элементы, которые у вас отсутствуют, не отображаются.
       </div>
     </div>
     <!-- Main content -->
@@ -180,7 +180,7 @@ $item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3
             <div class="col-xs-12">
               <div class="box box-danger">
                 <div class="box-header">
-                  <h3 class="box-title">내 아이템 목록</h3>
+                  <h3 class="box-title">Мой список предметов</h3>
 
                   <div class="box-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
@@ -192,132 +192,132 @@ $item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3
                   <table class="table table-hover">
 
                                         <tr>
-                                          <th>이름</th>
-                                          <th>갯수</th>
-                                          <th>Reason</th>
+                                          <th>Название</th>
+                                          <th>Номер</th>
+                                          <th>Причина</th>
                                         </tr>
                                           <?php if($row['item_0'] == 0) { } else {?>
                                         <tr>
-                                          <!-- 이름 -->  <td>사과주스</td>
-                                            <!-- 갯수 -->  <td><?php echo $row['item_0']?></td>
-                                          <td>  <span class="label label-success">food</span> </td>
-                                        <!-- 설명 -->    <td>갈증을 조금 해결해준다.</td>
+                                          <!-- название -->  <td>Яблочный сок</td>
+                                            <!-- номер -->  <td><?php echo $row['item_0']?></td>
+                                          <td>  <span class="label label-success">Еда</span> </td>
+                                        <!-- объяснение -->    <td>Это решает небольшую жажду.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_1'] == 0) { } else {?>
                                         <tr>
-                                          <!-- 이름 -->  <td>오렌지주스</td>
+                                          <!-- 이름 -->  <td>Апельсин</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_1']?></td>
-                                          <td>  <span class="label label-success">food</span> </td>
-                                        <!-- 설명 -->    <td>갈증을 조금 해결해준다.</td>
+                                          <td>  <span class="label label-success">Еда</span> </td>
+                                        <!-- 설명 -->    <td>Это решает небольшую жажду.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_2'] == 0) { } else {?>
-                                          <!-- 이름 -->  <td>담배</td>
+                                          <!-- 이름 -->  <td>Табак</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_2']?></td>
-                                          <td>  <span class="label label-primary">ciga</span> </td>
-                                        <!-- 설명 -->    <td>신체 기능을 저하시키지만, 만족도를 올려준다.</td>
+                                          <td>  <span class="label label-primary">Дым</span> </td>
+                                        <!-- 설명 -->    <td>Уменьшает функцию тела, но увеличивает удовлетворение.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_3'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>ID CARD</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_3']?></td>
-                                          <td>  <span class="label label-warning">card</span> </td>
-                                        <!-- 설명 -->    <td>이곳 직원의 ID카드이다. 이것으로 많은 건물에 출입을 드나들 수 있다.</td>
+                                          <td>  <span class="label label-warning">Карта</span> </td>
+                                        <!-- 설명 -->    <td>Это идентификационная карточка сотрудника. Это позволяет получить доступ ко многим зданиям.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_4'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>MY ID CARD</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_4']?></td>
-                                          <td>  <span class="label label-warning">card</span> </td>
-                                        <!-- 설명 -->    <td>임시피난소에 들어갈 수 있는 ID CARD이다. 이 카드가 없으면 임시피난소에 접근이 불가능 하다.</td>
+                                          <td>  <span class="label label-warning">Карта</span> </td>
+                                        <!-- 설명 -->    <td>Это идентификационная карточка, которая может войти в временное убежище. Без этой карты доступ к временному убежищу невозможен.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_5'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>Car Keys</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_5']?></td>
-                                          <td>  <span class="label label-warning">key</span> </td>
-                                        <!-- 설명 -->    <td>무슨 차량인진 모르겠지만, 아마 맞는 차가 있을 것 같다.</td>
+                                          <td>  <span class="label label-warning">Ключ</span> </td>
+                                        <!-- 설명 -->    <td>Я не знаю, что это за автомобиль, но, похоже, это правильный автомобиль.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_6'] == 0) { } else {?>
-                                          <!-- 이름 -->  <td>니콜라스의 임무증</td>
+                                          <!-- 이름 -->  <td>Заявление Николаса</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_6']?></td>
-                                          <td>  <span class="label label-warning">card</span> </td>
-                                        <!-- 설명 -->    <td>니콜라스의 임무증이다.</td>
+                                          <td>  <span class="label label-warning">Карта</span> </td>
+                                        <!-- 설명 -->    <td>Это миссия Николая.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_7'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>9MM</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_7']?></td>
-                                          <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>총기에 사용되는 총알이다.</td>
+                                          <td>  <span class="label label-danger">пуля</span> </td>
+                                        <!-- 설명 -->    <td>Это пуля, используемая в огнестрельном оружии.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_8'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>5.56MM</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_8']?></td>
-                                          <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>총기에 사용되는 총알이다.</td>
+                                          <td>  <span class="label label-danger">пуля</span> </td>
+                                        <!-- 설명 -->    <td>Это пуля, используемая в пистолете.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_9'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>12GAUGE</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_9']?></td>
-                                          <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>총기에 사용되는 총알이다.</td>
+                                          <td>  <span class="label label-danger">пуля</span> </td>
+                                        <!-- 설명 -->    <td>Это пуля, используемая в огнестрельном оружии.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_10'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>45ACP</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_10']?></td>
-                                          <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>총기에 사용되는 총알이다.</td>
+                                          <td>  <span class="label label-danger">пуля</span> </td>
+                                        <!-- 설명 -->    <td>Это пуля, используемая в огнестрельном оружии.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_11'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>7.62MM</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_11']?></td>
                                           <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>총기에 사용되는 총알이다.</td>
+                                        <!-- 설명 -->    <td>Это пуля, используемая в огнестрельном оружии.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_12'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>7.92MM</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_12']?></td>
                                           <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>총기에 사용되는 총알이다.</td>
+                                        <!-- 설명 -->    <td>Это пуля, используемая в огнестрельном оружии.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_13'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>357</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_13']?></td>
                                           <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>총기에 사용되는 총알이다.</td>
+                                        <!-- 설명 -->    <td>Это пуля, используемая в огнестрельном оружии.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_14'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>303</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_14']?></td>
                                           <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>총기에 사용되는 총알이다.</td>
+                                        <!-- 설명 -->    <td>Это пуля, используемая в огнестрельном оружии.</td>
                                       </tr> <?php }?>
                                         <?php if($row['item_15'] == 0) { } else {?>
-                                          <!-- 이름 -->  <td>빵</td>
+                                          <!-- 이름 -->  <td>Хлеб</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_15']?></td>
-                                          <td>  <span class="label label-success">food</span> </td>
-                                        <!-- 설명 -->    <td>먹으면 포만감을 조금 채워줄 것 같다.</td>
+                                          <td>  <span class="label label-success">Еда</span> </td>
+                                        <!-- 설명 -->    <td>Если вы едите, похоже, здоровье немного наполнится.</td>
                                         </tr>
                                         <?php } ?><?php if($row['item_16'] == 0) { } else {?>
                                           <!-- 이름 -->  <td>물</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_16']?></td>
-                                          <td>  <span class="label label-success">food</span> </td>
+                                          <td>  <span class="label label-success">Еда</span> </td>
                                         <!-- 설명 -->    <td>마시면 갈증을 조금 채워줄 것 같다.</td>
                                       </tr> <?php } ?>
                                       <?php if($row['item_17'] == 0) { } else {?>
-                                          <!-- 이름 -->  <td>통조림</td>
+                                          <!-- 이름 -->  <td>Консервы</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_17']?></td>
-                                          <td>  <span class="label label-success">food</span> </td>
-                                        <!-- 설명 -->    <td>먹으면 포만감을 조금 채워줄 것 같다.</td>
+                                          <td>  <span class="label label-success">Еда</span> </td>
+                                        <!-- 설명 -->    <td>Если вы едите, похоже, здоровье немного наполнится.</td>
                                         </tr>
                                         <?php } ?>
                                         <?php if($row['item_18'] == 0) { } else {?>
-                                          <!-- 이름 -->  <td>기름통(30L)</td>
+                                          <!-- 이름 -->  <td>Масляный картер (30 л)</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_18']?></td>
                                           <td>  <span class="label label-primary">gasoline</span> </td>
-                                        <!-- 설명 -->    <td>30리터 용량인 기름통이다.</td>
+                                        <!-- 설명 -->    <td>Это масляный картер мощностью 30 литров.</td>
                                       </tr><?php } ?>
                                         <?php if($row['item_19'] == 0) { } else {?>
-                                          <!-- 이름 -->  <td>무기상자</td>
+                                          <!-- 이름 -->  <td>Коробка для оружия</td>
                                             <!-- 갯수 -->  <td><?php echo $row['item_19']?></td>
-                                          <td>  <span class="label label-danger">bullet</span> </td>
-                                        <!-- 설명 -->    <td>알 수 없는 무기가 들어있는 상자이다.</td>
+                                          <td>  <span class="label label-danger">пуля</span> </td>
+                                        <!-- 설명 -->    <td>Это ящик с неизвестным оружием.</td>
                                       </tr><?php } ?>
                                       </table>
                                     </div>
@@ -344,6 +344,7 @@ $item_w=array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","2","3
     <!-- To the right -->
 
     <!-- Default to the left -->
+  <strong>Translated to Russia by <a href="fanhammer.ru">FanHamMer</a>. 2017&nbsp.</strong>
   <strong>Copyright &copy; 2016 <a href="cafe.daum.net/WarZ">WarZ</a>&nbsp; (developer helios).</strong> All rights reserved.
   </footer>
 
