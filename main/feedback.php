@@ -11,7 +11,7 @@ $p_name=$_SESSION['p_name'];
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>WarZ | 피드백</title>
+        <title>WarZ | Обратная связь</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.6 -->
@@ -42,7 +42,7 @@ $p_name=$_SESSION['p_name'];
                 <!-- Header Navbar -->
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
-                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <span class="sr-only">Toggle navigation</span> </a>
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <span class="sr-only">Переключить навигацию</span> </a>
                     <!-- Navbar Right Menu -->
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
@@ -62,8 +62,8 @@ $p_name=$_SESSION['p_name'];
                                     </li>
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
-                                        <div class="pull-left"> <a href="#" class="btn btn-default btn-flat">내정보</a> </div>
-                                        <div class="pull-right"> <a href="../dist/include/logout.php" class="btn btn-default btn-flat">로그아웃</a> </div>
+                                        <div class="pull-left"> <a href="#" class="btn btn-default btn-flat">Моя информация</a> </div>
+                                        <div class="pull-right"> <a href="../dist/include/logout.php" class="btn btn-default btn-flat">Выйти</a> </div>
                                     </li>
                                 </ul>
                             </li>
@@ -84,18 +84,18 @@ $p_name=$_SESSION['p_name'];
                             <p>
                                 <?php echo $p_name;?>
                             </p>
-                            <!-- Status --><a href="#"><i class="fa fa-circle text-success"></i> 온라인</a> </div>
+                            <!-- Status --><a href="#"><i class="fa fa-circle text-success"></i> Интернет</a> </div>
                     </div>
                     <!-- Sidebar Menu -->
                     <ul class="sidebar-menu">
-                        <li class="header">메뉴</li>
+                        <li class="header">Меню</li>
                         <!-- Optionally, you can add icons to the links -->
-                        <li><a href="index.php"><i class="fa fa-book"></i> <span>내정보</span></a></li>
-                        <li><a href="backpack.php"><i class="fa fa-archive"></i> <span>가방</span></a></li>
-                        <li><a href="rank.php"><i class="fa fa-heart"></i> <span>랭킹</span></a></li>
-                        <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>업데이트 내역</span></a></li>
-                        <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>서버 현황</span></a></li>
-                        <li class="active"><a href="feedback.php"><i class="fa fa-commenting"></i> <span>피드백</span></a></li>
+                        <li><a href="index.php"><i class="fa fa-book"></i> <span>Моя информация</span></a></li>
+                        <li><a href="backpack.php"><i class="fa fa-archive"></i> <span>Инвентарь</span></a></li>
+                        <li><a href="rank.php"><i class="fa fa-heart"></i> <span>Ранжирование</span></a></li>
+                        <li><a href="update_log.php"><i class="fa fa-edit"></i> <span>История обновлений</span></a></li>
+                        <li><a href="sv_info.php"><i class="fa fa-th"></i> <span>Состояние сервера</span></a></li>
+                        <li class="active"><a href="feedback.php"><i class="fa fa-commenting"></i> <span>Обратная связь</span></a></li>
                     </ul>
                     <!-- /.sidebar-menu -->
                 </section>
@@ -110,22 +110,22 @@ $p_name=$_SESSION['p_name'];
       </h1> </section>
                 <div class="pad margin no-print">
                     <div class="callout callout-info" style="margin-bottom: 0!important;">
-                        <h4><i class="fa  fa-bullhorn"></i> 개발자의 한마디:</h4> 많은 피드백 부탁 드립니다. ^_^ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Titor 와 Helios 의 Say. </div>
+                        <h4><i class="fa  fa-bullhorn"></i>Слово разработчика:</h4> Благодарим вас за отзыв. ^_^ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Titor 와 Helios 의 Say. </div>
                 </div>
                 <!-- Main content -->
                 <section class="content">
                     <div class="box box-danger">
                         <form action="../dist/include/feedback_add.php" method="POST">
                             <div class="box-header with-border">
-                                <h3 class="box-title">글 작성</h3> </div>
+                                <h3 class="box-title">Вклад</h3> </div>
                             <div class="box-body">
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="form-group">
                                             <input type="hidden" name="f_name" value="<?php echo $p_name;?>" class="hide" style="border: 0px;" readonly>
-                                            <textarea class="form-control" rows="5" name="f_contents" placeholder="피드백을 적어주세요 >ㅁ<" required></textarea>
+                                            <textarea class="form-control" rows="5" name="f_contents" placeholder="Запишите свои отзывы" required></textarea>
                                         </div>
-                                        <button type="submit" name="submit" class="btn btn-danger">등록</button>
+                                        <button type="submit" name="submit" class="btn btn-danger">Регистрация</button>
                         </form>
                         <br>
                         <br>
@@ -135,12 +135,12 @@ $p_name=$_SESSION['p_name'];
                             <table class="table table-hover">
                                 <tr>
                                     <th>
-                                        <center>닉네임</center>
+                                        <center>Логин</center>
                                     </th>
                                     <th>
-                                        <center>내용</th>
+                                        <center>Содержание</th>
                                     <th>
-                                        <center>날짜</center>
+                                        <center>Дата</center>
                                     </th>
                                 </tr>
                                 <?php
@@ -171,7 +171,8 @@ $p_name=$_SESSION['p_name'];
         <!-- Main Footer -->
         <footer class="main-footer">
             <!-- To the right -->
-            <!-- Default to the left --><strong>Copyright &copy; 2016 <a href="cafe.daum.net/WarZ">WarZ</a>&nbsp; (developer helios).</strong> All rights reserved. </footer>
+            <!-- Default to the left -->
+        <strong>Copyright &copy; 2016 <a href="cafe.daum.net/WarZ">WarZ</a>&nbsp; (developer helios).</strong> All rights reserved. </footer>
         <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
         <div class="control-sidebar-bg"></div>
