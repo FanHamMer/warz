@@ -8,7 +8,7 @@ session_start();
 if($_SESSION[p_name]){
     ?>
     <script>
-        alert("로그인 하신 상태입니다. 메인으로 돌아갑니다.");
+        alert("Вы вошли в систему. Вернуться к началу.");
         location.href = "main/";
     </script>
     <?php
@@ -23,7 +23,7 @@ if($_SESSION[p_name]){
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>WarZ | 로그인</title>
+  <title>WarZ | Войти</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -55,22 +55,22 @@ if($_SESSION[p_name]){
 
     <form action="dist/include/login.php" method="post">
       <div class="form-group has-feedback">
-        <input type="text" name="p_name" class="form-control" placeholder="닉네임" required autocomplete="off" style="ime-mode:inactive">
+        <input type="text" name="p_name" class="form-control" placeholder="Логин" required autocomplete="off" style="ime-mode:inactive">
         <span class="glyphicon glyphicon-check form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="p_password" class="form-control" placeholder="비밀번호" required autocomplete="off">
+        <input type="password" name="p_password" class="form-control" placeholder="Пароль" required autocomplete="off">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
 
-          <a href="register.php?status=myself"><button type="button" class="btn btn-default btn-block btn-flat">회원가입</button></a>
+          <a href="register.php?status=myself"><button type="button" class="btn btn-default btn-block btn-flat">Регистрация</button></a>
 
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" name="submit" class="btn btn-danger btn-block btn-flat">로그인</button></form>
+          <button type="submit" name="submit" class="btn btn-danger btn-block btn-flat">Войти</button></form>
         </div>
         <!-- /.col -->
       </div>
