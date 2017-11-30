@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Radeon RP | Main</title>
+  <title>WarZ | Главная</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -43,7 +43,7 @@
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Переключить навигацию</span>
       </a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
@@ -58,19 +58,19 @@
               <span class="label label-warning">10</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
+              <li class="header">У вас есть 10 уведомлений</li>
               <li>
                 <!-- Inner Menu: contains the notifications -->
                 <ul class="menu">
                   <li><!-- start notification -->
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      <i class="fa fa-users text-aqua"></i> 5 новых членов присоединились сегодня
                     </a>
                   </li>
                   <!-- end notification -->
                 </ul>
               </li>
-              <li class="footer"><a href="#">View all</a></li>
+              <li class="footer"><a href="#">Посмотреть все</a></li>
             </ul>
           </li>
 
@@ -97,10 +97,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">내정보</a>
+                  <a href="#" class="btn btn-default btn-flat">Моя информация</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">로그아웃</a>
+                  <a href="#" class="btn btn-default btn-flat">Выйти</a>
                 </div>
               </li>
             </ul>
@@ -127,16 +127,16 @@
         <div class="pull-left info">
           <p>Keith_Gianpaolo</p>
           <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> 온라인</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> Интернет</a>
         </div>
       </div>
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
-        <li class="header">메뉴</li>
+        <li class="header">Меню</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-book"></i> <span>내정보</span></a></li>
-        <li>  <a href="#"><i class="fa fa-edit"></i> <span>업데이트 로그</span></a></li>
+        <li class="active"><a href="#"><i class="fa fa-book"></i> <span>Моя информация</span></a></li>
+        <li>  <a href="#"><i class="fa fa-edit"></i> <span>Журнал обновлений</span></a></li>
 
       </ul>
       <!-- /.sidebar-menu -->
@@ -149,7 +149,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      내정보
+      Моя информация
       </h1>
     </section>
 
@@ -169,13 +169,13 @@
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>국적</b> <a class="pull-right">미국</a>
+                  <b>Национальность</b> <a class="pull-right">Американец</a>
                 </li>
                 <li class="list-group-item">
-                  <b>나이</b> <a class="pull-right">32</a>
+                  <b>Возраст</b> <a class="pull-right">32</a>
                 </li>
                 <li class="list-group-item">
-                  <b>전화번호</b> <a class="pull-right">911</a>
+                  <b>Номер телефона</b> <a class="pull-right">911</a>
                 </li>
               </ul>
 
@@ -187,16 +187,16 @@
           <!-- About Me Box -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">out of character</h3>
+              <h3 class="box-title">О себе</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>경고</b> <a class="pull-right">1/5</a>
+                  <b>предупреждение</b> <a class="pull-right">1/5</a>
                 </li>
                 <li class="list-group-item">
-                  <b>칭찬</b> <a class="pull-right">3/5</a>
+                  <b>похвала</b> <a class="pull-right">3/5</a>
                 </li>
 
               </ul></div>
@@ -208,9 +208,9 @@
         <div class="col-md-9">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#activity" data-toggle="tab">관리탭</a></li>
-              <li><a href="#timeline" data-toggle="tab">차량 및 자격증</a></li>
-              <li><a href="#settings" data-toggle="tab">설정</a></li>
+              <li class="active"><a href="#activity" data-toggle="tab">Вкладка</a></li>
+              <li><a href="#timeline" data-toggle="tab">Автомобиль и сертификация</a></li>
+              <li><a href="#settings" data-toggle="tab">Настройки</a></li>
             </ul>
             <div class="tab-content">
               <div class="active tab-pane" id="activity">
@@ -221,16 +221,16 @@
               <div class="tab-pane" id="settings">
                 <form class="form-horizontal">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">비밀번호</label>
+                    <label for="inputName" class="col-sm-2 control-label">Пароль</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="비밀번호 입력">
+                      <input type="email" class="form-control" id="inputName" placeholder="Введите пароль">
                     </div>
                   </div>  <div class="form-group">
                       <label for="inputName" class="col-sm-2 control-label">└</label>
 
                       <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputName" placeholder="비밀번호 재입력">
+                        <input type="email" class="form-control" id="inputName" placeholder="Повторно введите пароль">
                       </div>
                     </div>
 
@@ -238,14 +238,14 @@
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox"> 위 변경 내용을 숙지 하겠습니다.</a>
+                          <input type="checkbox">Я пойму вышеперечисленные изменения.</a>
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Submit</button>
+                      <button type="submit" class="btn btn-danger">Принять</button>
                     </div>
                   </div>
                 </form>
@@ -290,28 +290,28 @@
     <div class="tab-content">
       <!-- Home tab content -->
       <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <h3 class="control-sidebar-heading">Последние действия</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <h4 class="control-sidebar-subheading">День рождения Лэнгдона</h4>
 
-                <p>Will be 23 on April 24th</p>
+                <p>Будет с 23 апреля на 24-е</p>
               </div>
             </a>
           </li>
         </ul>
         <!-- /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <h3 class="control-sidebar-heading">Выполнение задач</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
               <h4 class="control-sidebar-subheading">
-                Custom Template Design
+                Дизайн пользовательских шаблонов
                 <span class="pull-right-container">
                   <span class="label label-danger pull-right">70%</span>
                 </span>
@@ -328,12 +328,12 @@
       </div>
       <!-- /.tab-pane -->
       <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <div class="tab-pane" id="control-sidebar-stats-tab">Содержимое вкладки Статистика</div>
       <!-- /.tab-pane -->
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
         <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
+          <h3 class="control-sidebar-heading">Общие настройки</h3>
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
@@ -342,7 +342,7 @@
             </label>
 
             <p>
-              Some information about this general settings option
+              Некоторая информация об этом параметре общих настроек
             </p>
           </div>
           <!-- /.form-group -->
